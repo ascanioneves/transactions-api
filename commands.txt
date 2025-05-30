@@ -1,0 +1,13 @@
+Primeiro configurar um arquivo knexfile.ts, porem precisamos tratar para usar ts:
+Criar um comando no package.json:
+"knex": "node --import tsx ./node_modules/knex/bin/cli.js"
+
+
+Criar uma migration "create-documents"
+npm run knex -- migrate:make create-documents
+
+Executar as migrations
+npm run knex -- migrate:latest
+
+Desfazer a migration executada
+npm run knex -- migrate:rollback
